@@ -1,0 +1,21 @@
+{
+    "name": "baohx2000/qless-demo",
+    "description": "Demo of qless job queue",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "authors": [
+        {
+            "name": "Gordon",
+            "email": "baohx2000@gmail.com"
+        }
+    ],
+    "require": {
+        "contatta/qless-php": "dev-master",
+        "symfony/console": "^3.0@dev"
+    },
+  "autoload"          : {
+    "psr-4" : {
+      "B2k\\QlessDemo\\" : "src/B2k/QlessDemo"
+    }
+  }
+}

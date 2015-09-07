@@ -4,7 +4,7 @@ namespace B2k\QlessDemo;
 use Qless\Job;
 
 class JobHandler {
-    public function perform(Job $job){
+    public function perform(Job $job) {
         echo "starting job\n";
         sleep(5);
         $job->heartbeat();

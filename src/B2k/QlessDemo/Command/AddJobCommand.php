@@ -17,9 +17,12 @@ class AddJobCommand extends Command
     public function configure()
     {
         $this->setName('qless:add-job')
-            ->addOption('jid', null, InputOption::VALUE_REQUIRED, 'Job ID (to overwrite)', microtime(true))
+            ->addOption('jid', null, InputOption::VALUE_REQUIRED, 'Job ID (to overwrite)', 'job.'.time())
             ->addOption('delay', null, InputOption::VALUE_REQUIRED, 'Seconds of delay', 0)
             ->addOption('klass', 'k', InputOption::VALUE_REQUIRED, 'Class to handle job', JobHandler::class)
+            ->addOption('delay', null, InputOption::VALUE_REQUIRED, 'How long before we start the job', 0)
+            ->addOption('retries', null, InputOption::VALUE_REQUIRED, 'How many retries', 0)
+            ->addOption('interval', null, InputOption::VALUE_REQUIRED, 'How often job should heartbeat', 10)
             ->addArgument('queue', InputArgument::REQUIRED, 'Queue to run on')
             ->addArgument('data', InputArgument::OPTIONAL, 'Data to use for job (JSON)', '{fail:false,hang:false}');
     }
@@ -33,7 +36,13 @@ class AddJobCommand extends Command
         $result = $queue->put(
             $input->getOption('klass') ?: null,
             $input->getOption('jid'),
-            json_decode($input->getArgument('data'))
+            json_decode($input->getArgument('data')),
+            intval($input->getOption('delay')),
+            intval($input->getOption('retries')),
+            true,
+            0,
+            [],
+            intval($input->getOption('interval'))
         );
 
         $output->writeln($result);

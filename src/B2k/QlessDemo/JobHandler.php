@@ -5,10 +5,12 @@ use Qless\Job;
 
 class JobHandler {
     public function perform(Job $job){
-        echo "Here in JobHandler perform";
-        $instance = $job->getInstance();
-        $data = $job->getData();
-        $method = array_key_exists('performMethod', $data) ? $data['performMethod'] : 'work';
-        $instance->$method($job);
+        echo "starting job\n";
+        sleep(5);
+        $job->heartbeat();
+        echo "still jobbing\n";
+        sleep(2);
+        echo "job's done\n";
+        $job->complete();
     }
 }

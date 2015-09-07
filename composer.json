@@ -9,8 +9,14 @@
             "email": "baohx2000@gmail.com"
         }
     ],
+    "repositories": [
+      {
+        "type": "git",
+        "url": "https://github.com/baohx2000/qless-php.git"
+      }
+    ],
     "require": {
-        "contatta/qless-php": "dev-master",
+        "contatta/qless-php": "dev-fix-getinstance",
         "symfony/console": "^3.0@dev"
     },
   "autoload"          : {

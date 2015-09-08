@@ -16,7 +16,7 @@
       }
     ],
     "require": {
-        "contatta/qless-php": "dev-fix-getinstance",
+        "contatta/qless-php": "dev-fixed",
         "symfony/console": "^3.0@dev"
     },
   "autoload"          : {

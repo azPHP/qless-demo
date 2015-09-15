@@ -78,12 +78,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Console.git",
-                "reference": "cb6ea809412aa4d1514be6f73bd59b8279a1bd9a"
+                "reference": "c32d1e7ffe11b7329d72c94c5970ab4001c9f858"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Console/zipball/cb6ea809412aa4d1514be6f73bd59b8279a1bd9a",
-                "reference": "cb6ea809412aa4d1514be6f73bd59b8279a1bd9a",
+                "url": "https://api.github.com/repos/symfony/Console/zipball/c32d1e7ffe11b7329d72c94c5970ab4001c9f858",
+                "reference": "c32d1e7ffe11b7329d72c94c5970ab4001c9f858",
                 "shasum": ""
             },
             "require": {
@@ -127,7 +127,7 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2015-09-03 19:46:43"
+            "time": "2015-09-14 14:15:24"
         }
     ],
     "packages-dev": [],

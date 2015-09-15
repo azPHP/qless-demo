@@ -17,7 +17,7 @@ class AddJobCommand extends Command
     public function configure()
     {
         $this->setName('qless:add-job')
-            ->addOption('jid', null, InputOption::VALUE_REQUIRED, 'Job ID (to overwrite)', 'job.'.time())
+            ->addOption('jid', null, InputOption::VALUE_REQUIRED, 'Job ID (to overwrite)', 'job.'.sha1(microtime()))
             ->addOption('klass', 'k', InputOption::VALUE_REQUIRED, 'Class to handle job', JobHandler::class)
             ->addOption('delay', null, InputOption::VALUE_REQUIRED, 'How long before we start the job', 0)
             ->addOption('retries', null, InputOption::VALUE_REQUIRED, 'How many retries', 0)

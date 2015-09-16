@@ -13,4 +13,4 @@ In another shell:
 
 ## OSX
 
-* Running in OSX will work, ut you will end up with some odd errors in the worker as it expects to be run on linux where process verbage can be changed, allowing you to to show a worker as "qless:master MyWorker" etc.
+* Running in OSX will work, but you will end up with some odd errors in the worker as it expects to be run on linux where process verbage can be changed, allowing you to to show a worker as "qless:master MyWorker" etc.

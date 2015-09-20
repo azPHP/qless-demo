@@ -12,11 +12,12 @@ class Requeue
         $jid  = $job->getId();
         echo $jid."\n";
 
+//        throw new \Exception('Something bad, man');
         sleep(5);
         $job->heartbeat();
-        sleep(2);
-//        $job->complete();
-//        return;
+        sleep(5);
+        $job->heartbeat();
+        sleep(5);
         $job->requeue([
             'data' => [
                 'time' => time(),
